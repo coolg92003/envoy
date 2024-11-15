@@ -167,6 +167,7 @@ public:
     return std::make_unique<UdpTapSinkHandle>(*this, trace_id);
   }
   bool isUdpPacketWriterCreated(void) { return (udp_packet_writer_ != nullptr); }
+
 private:
   struct UdpTapSinkHandle : public PerTapSinkHandle {
     UdpTapSinkHandle(UdpTapSink& parent, uint64_t trace_id)
